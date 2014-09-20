@@ -1,8 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
-
+## MakeCacheMatrix creates a list of functions to 
+## get and set the values of the matrix and its inverse
 makeCacheMatrix <- function(x = numeric()) {
     m <- NULL
     set <- function(y) {
@@ -19,6 +17,11 @@ makeCacheMatrix <- function(x = numeric()) {
 
 
 
+#cacheSolve returns an inverted matrix. It first checks to see if an
+#inverted matrix has already been calculated and if it has it returns the
+#cached matrix. If the inverted matrix has not been calculated, 
+#it performs the calculation, stores the value in the cached 
+#variable and returns the inverted matrix
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
